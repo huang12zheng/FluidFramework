@@ -14,9 +14,9 @@ const requiredModules = [
     `${testPackagesDir}/test-drivers`, // Inject implementation of getFluidTestDriver, configured via FLUID_TEST_DRIVER
 ];
 
-if (process.env.FLUID_DI_ROOT && process.env.FLUID_DI_LOGGERPKG) {
+if (process.env.FLUID_DI_LOGGERPKG) {
     // Inject implementation of getTestLogger
-    requiredModules.push(`${process.env.FLUID_DI_ROOT}/${process.env.FLUID_DI_LOGGERPKG}`);
+    requiredModules.push(process.env.FLUID_DI_LOGGERPKG);
 }
 
 const config = {

@@ -110,7 +110,7 @@ jobs:
         script: |
                 mv _package.json package.json;
                 mv _package-lock.json package-lock.json;
-                node .\registerDependencies.js
+                node ./registerDependencies.js
 
     # [DI] Install dependency-injection package
     - task: Npm@1
